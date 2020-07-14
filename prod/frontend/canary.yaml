@@ -36,9 +36,9 @@ spec:
     # schedule interval (default 60s)
     interval: 15s
     # max number of failed metric checks before rollback
-    threshold: 10
+    threshold: 3
     # total number of iterations
-    iterations: 1
+    iterations: 10
     # canary match condition
     match:
       - headers:
