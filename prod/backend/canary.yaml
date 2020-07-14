@@ -44,7 +44,7 @@ spec:
           name: error-rate
           namespace: istio-system
         thresholdRange:
-          max: 1
+          max: 5
         interval: 30s
       - name: latency
         templateRef:
@@ -64,7 +64,7 @@ spec:
           cmd: "curl -sd 'test' http://backend-canary.prod:9898/token | grep token"
       - name: load-test
         type: rollout
-        timeout: 15s
+        timeout: 95s
         url: http://flagger-loadtester.prod/
         metadata:
           type: cmd
