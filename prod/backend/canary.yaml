@@ -57,7 +57,7 @@ spec:
     webhooks:
       - name: conformance-test
         type: pre-rollout
-        timeout: 15s
+        timeout: 115s
         url: http://flagger-loadtester.prod/
         metadata:
           type: bash

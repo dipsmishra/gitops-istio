@@ -6,7 +6,7 @@ metadata:
   labels:
     app: frontend
 spec:
-  minReadySeconds: 5
+  minReadySeconds: 25
   revisionHistoryLimit: 5
   progressDeadlineSeconds: 60
   strategy:
@@ -47,8 +47,8 @@ spec:
             - check
             - http
             - localhost:9898/healthz
-          initialDelaySeconds: 5
-          timeoutSeconds: 5
+          initialDelaySeconds: 25
+          timeoutSeconds: 125
         readinessProbe:
           exec:
             command:
@@ -56,8 +56,8 @@ spec:
             - check
             - http
             - localhost:9898/readyz
-          initialDelaySeconds: 5
-          timeoutSeconds: 5
+          initialDelaySeconds: 25
+          timeoutSeconds: 125
         resources:
           limits:
             cpu: 200m
