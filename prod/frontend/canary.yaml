@@ -39,12 +39,6 @@ spec:
     threshold: 10
     # total number of iterations
     iterations: 1
-    # max traffic percentage routed to canary
-    # percentage (0-100)
-    maxWeight: 50
-    # canary increment step
-    # percentage (0-100)
-    stepWeight: 5
     # canary match condition
     match:
       - headers:
